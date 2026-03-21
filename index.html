@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твій внутрішній спокій під час зовнішнього хаосу | Тренування мозку</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GoatCounter Analytics -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '//gc.zgo.at/count.js';
+            script.setAttribute('data-goatcounter', 'https://pre-order.goatcounter.com/count');
+            script.onerror = function() {};
+            document.head.appendChild(script);
+        })();
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1504848644984878');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1504848644984878&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* purpleplanet design system */
+        :root {
+            --color-dark: #26282b;
+            --color-dark-lighter: #32373c;
+            --color-border: #4a5058;
+            --color-primary: #e1b518;
+            --color-primary-bg: #ac8710;
+            --color-text: #ffffff;
+            --color-text-light: #b8b8b8;
+            --color-white: #ffffff;
+            --font-primary: 'Outfit', sans-serif;
+            --font-secondary: 'Inter', sans-serif;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 2.5rem;
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 40px;
+            --radius-full: 50px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-dark);
+        }
+
+        /* ===== LAYOUT — purpleplanet ===== */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-2xl);
+            padding: var(--spacing-xl) 0;
+        }
+
+        /* ===== HERO — purpleplanet blog ===== */
+        .hero-block {
+            text-align: center;
+            padding-bottom: var(--spacing-xl);
+        }
+
+        .hero-block h1 {
+            font-family: var(--font-primary);
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+        }
+
+        .hero-subtitle {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 560px;
+            margin: 0;
+            text-align: left;
+        }
+
+        .hero-image-block {
+            margin-top: var(--spacing-xl);
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .hero-image-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--color-border);
+        }
+
+        /* ===== КАРТКИ — purpleplanet content-cards-section ===== */
+        .card-item-inner {
+            padding: 48px 25px 40px;
+            background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-full);
+            box-shadow: 15px 25px 80px 8px #191b1e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-item-inner:hover {
+            border-color: rgba(74, 80, 88, 0.8);
+            box-shadow: 15px 25px 80px 12px #191b1e;
+        }
+
+        .number {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(315.62deg, var(--color-border), #191b1e 86.57%) padding-box,
+                        linear-gradient(316.32deg, #1e2225 5.26%, var(--color-border)) border-box;
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+            border: 6px solid transparent;
+            box-shadow: -6px -6px 12px 0 rgba(255,255,255,0.082);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-size: 70px;
+            font-weight: 200;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .number-inner {
+            color: var(--color-primary);
+            font-weight: 200;
+        }
+
+        .card-content h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        .card-content h2 strong {
+            color: var(--color-primary);
+        }
+
+        .card-content > p {
+            color: var(--color-text-light);
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* Текст після заголовка */
+        .icon-text {
+            margin-top: var(--spacing-lg);
+            width: 100%;
+            text-align: left;
+        }
+
+        .icon-text-inner {
+            width: 100%;
+        }
+
+        .icon-text .text p {
+            color: var(--color-text-light);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .icon-text .text p + p {
+            margin-top: 0.75rem;
+        }
+
+        /* Картки з підпунктами — purpleplanet */
+        .card-subitems {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            width: 100%;
+        }
+
+        .card-subitem {
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+
+        .card-subitem h3 {
+            font-family: var(--font-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.35rem;
+            text-align: left;
+        }
+
+        .card-subitem p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin: 0;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* ===== ІНФОГРАФІКА — purpleplanet Infographics8 ===== */
+        .infographic-section {
+            text-align: left;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .infographic-section h2 {
+            font-family: var(--font-primary);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        .infographic-section > p {
+            color: var(--color-text-light);
+            font-size: 1rem;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .infographic-placeholder {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 400px;
+            aspect-ratio: 1 / 2;
+            background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
+            border: 2px dashed var(--color-border);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-light);
+            font-size: 1rem;
+            padding: var(--spacing-lg);
+        }
+
+        .infographic-placeholder span {
+            text-align: center;
+            opacity: 0.85;
+        }
+
+        .infographic-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: inherit;
+        }
+
+        /* ===== ПРО КОМАНДУ — purpleplanet ===== */
+        .team-block {
+            text-align: left;
+            padding: var(--spacing-md);
+        }
+
+        .team-block p {
+            color: var(--color-text-light);
+            font-size: 1rem;
+            max-width: 560px;
+            margin: 0;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* ===== FAQ — purpleplanet ===== */
+        .faq-section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .faq-section h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        .faq-item {
+            background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: var(--spacing-md) var(--spacing-lg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--color-text);
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(74, 80, 88, 0.2);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-md);
+            display: none;
+            color: var(--color-text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .faq-answer-list {
+            margin: var(--spacing-sm) 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .faq-answer-list li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* ===== CTA — purpleplanet ===== */
+        .cta-form-block {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-full);
+            text-align: left;
+            box-shadow: 15px 25px 80px 8px #191b1e;
+        }
+
+        .cta-form-block h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        .cta-form-block p {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .benefits-checklist {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .benefits-checklist li {
+            padding: 0.35rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .benefits-checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .cta-form-block form {
+            margin-top: var(--spacing-xl);
+        }
+
+        /* ===== BUTTONS — purpleplanet form-style submit ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            outline: none;
+            cursor: pointer;
+            border: 2px solid var(--color-white);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            color: var(--color-dark);
+            background-color: var(--color-primary-bg);
+        }
+
+        /* ===== FORM — purpleplanet form-style.css + floating labels ===== */
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--color-text-light);
+            text-align: left;
+            pointer-events: none;
+            transition: opacity 0.15s ease-in-out;
+            margin: 0;
+        }
+
+        /* Лейбл зникає, коли починаємо писати */
+        .form-group input:not(:placeholder-shown) ~ label {
+            opacity: 0;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            background: linear-gradient(180deg, var(--color-dark-lighter) 0%, var(--color-dark) 100%);
+            border: 2px solid var(--color-border);
+            border-radius: 5px;
+            color: var(--color-text);
+            font-family: inherit;
+            font-size: 1rem;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group input:focus-visible,
+        .form-group select:focus,
+        .form-group select:focus-visible,
+        .form-group textarea:focus,
+        .form-group textarea:focus-visible {
+            border-color: var(--color-primary);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--color-primary);
+        }
+
+        .form-group input.invalid,
+        .form-group input.invalid:focus {
+            border-color: #dc3232;
+        }
+
+        .form-group .error-msg {
+            display: block;
+            margin-top: 0.35rem;
+            font-size: 0.9rem;
+            color: #dc3232;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+
+        .form-nospam {
+            margin-top: var(--spacing-sm);
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            text-align: center;
+        }
+
+        /* ===== RESPONSIVE — mobile-first ===== */
+        @media (min-width: 768px) {
+            .card-subitems {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+
+            .hero-block h1 {
+                font-size: 1.60rem;
+            }
+
+            .card-item-inner {
+                padding: 30px 15px 22px;
+                border-radius: var(--radius-xl);
+            }
+
+            .card-content h2 {
+                font-size: 1.2rem;
+            }
+
+            .number {
+                width: 70px;
+                height: 70px;
+                font-size: 48px;
+                margin-bottom: 16px;
+            }
+
+            .card-subitem {
+                padding: var(--spacing-md);
+            }
+
+            .card-subitems {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <!-- Hero -->
+            <div class="hero-block">
+                <h1>Твій внутрішній спокій <br> під час зовнішнього хаосу</h1>
+                <p class="hero-subtitle">Розумна гарнітура допоможе швидко сфокусуватися на роботі та відновити сили</p>
+                <div class="hero-image-block">
+                    <!-- Додайте шлях до зображення в src -->
+                    <img src="main.png" alt="EEG-гарнітура" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Картка 1: Вашому мозку важче -->
+            <section class="card-section">
+                <div class="card-item-inner">
+                    <div class="number">
+                        <div class="number-inner">1</div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Вашому мозку зараз<br><strong>важче ніж будь-коли</strong></h2>
+                        <p>- постійний стрес
+                        <br>- тривоги та напруження 
+                        <br>- ниський внутрішній ресурс
+                        <br>- складно зосередитись
+                        <br>- відпочинок не дає заряд</p>
+                    </div>
+                    <div class="card-subitems">
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Постійна тривога</h3>
+                                <p>Важко «вимкнути» голову після обстрілів, сирен або поганих новин.</p>
+                            </div>
+                        </div>
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Розфокус</h3>
+                                <p>Коли нарешті є світло й час працювати, потрібно встигнути все швидко — але концентрація не повертається.</p>
+                            </div>
+                        </div>
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Втома</h3>
+                                <p>Навіть після короткого відпочинку залишається відчуття порожнечі, виснаження та перевантаження.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Інфографіка — placeholder -->
+            <section class="infographic-section">
+                <h2>Як працює пристрій</h2>
+                <p>Послідовність від напруження до спокою</p>
+                <div class="infographic-placeholder">
+                    <span>Тут буде інфографіка з послідовністю роботи пристрою</span>
+                </div>
+            </section>
+
+            <!-- Картка 2: Технологія -->
+            <section class="card-section">
+                <div class="card-item-inner">
+                    <div class="number">
+                        <div class="number-inner">2</div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Технологія<br><strong>мозкової активності</strong></h2>
+                        <p>Це не просто додаток. Це легка гарнітура, яка зчитує мікросигнали мозку — подібно до того, як смарт-годинник вимірює пульс. Пристрій використовує технологію ЕЕГ (електроенцефалографію) — абсолютно безпечний метод пасивного зчитування.</p>
+                    </div>
+                    <div class="card-subitems">
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Звукова підказка</h3>
+                                <p>Коли увага розсіюється, додаток подає м'який звуковий сигнал, допомагаючи повернутися до спокійного стану.</p>
+                            </div>
+                        </div>
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Режим відновлення</h3>
+                                <p>Є лише 10 хвилин між справами? Гарнітура допоможе швидше перейти в стан глибшого розслаблення.</p>
+                            </div>
+                        </div>
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Офлайн-робота</h3>
+                                <p>Додаток працює без інтернету. Тренуйте фокус навіть у сховищі чи під час блекауту.</p>
+                            </div>
+                        </div>
+                        <div class="card-subitem">
+                            <div>
+                                <h3>Стійкість до стресу</h3>
+                                <p>З часом мозок навчається швидше повертатися до норми після напружених подій.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Картка 3: Покрокове використання -->
+            <section class="card-section">
+                <div class="card-item-inner">
+                    <div class="number">
+                        <div class="number-inner">3</div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Покрокове<br><strong>використання</strong></h2>
+                    </div>
+                    <div class="icon-text">
+                        <div class="icon-text-inner">
+                            <div class="text">
+                                <p><strong>1.</strong> Вдягаєте EEG‑гарнітуру — надіньте гарнітуру з сенсорами, які зчитують електричну активність мозку безболісно та безпечно.</p>
+                                <p style="margin-top: 0.5rem;"><strong>2.</strong> Запускаєте застосунок на телефоні — виберіть режим: медитація, антистрес або ігри для дітей. Все українською мовою.</p>
+                                <p style="margin-top: 0.5rem;"><strong>3.</strong> Коригуйте активність мозку наживо — відстежуйте хвилі та миттєво змінюйте свій стан через звукові та візуальні підказки в реальному часі.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Картка 4: Чому це важливо -->
+            <section class="card-section">
+                <div class="card-item-inner">
+                    <div class="number">
+                        <div class="number-inner">4</div>
+                    </div>
+                    <div class="card-content">
+                        <h2>Чому це<br><strong>важливо</strong></h2>
+                    </div>
+                    <div class="icon-text">
+                        <div class="icon-text-inner">
+                            <div class="text">
+                                <p><strong>Економія енергії.</strong> 
+                                    <br> - менше сил на «розкачку»
+                                    <br> - швидше входити в робочий стан
+                                    <br> - м'якший вихід з перевантаження</p>
+                                <p style="margin-top: 0.5rem;"><strong>Більше контролю над своїм станом.</strong> Краще розумієте сигнали власного тіла, стає легше не просто «триматися», а реально відновлювати ресурс.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Про команду -->
+            <section class="team-block">
+                <p>Ми — команда українських розробників.<br>Ми створили цей продукт, бо самі відчули, як важко працювати після безсонних ночей.</p>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Часті питання</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Це медичний пристрій?">
+                        <span>Це медичний пристрій?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ні, це інструмент для тренування уваги й регуляції, не діагностує і не лікує. Система допомагає навчитися керувати станом мозку, але не замінює терапію чи медикаменти.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Коли стартує пілот?">
+                        <span>Коли стартує пілот?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Орієнтовно в наступному кварталі. Точну дату ми повідомимо всім, хто залишив передзамовлення.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Якщо передзамовлення не стартує?">
+                        <span>Якщо передзамовлення не стартує?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ви нічого не сплачуєте зараз. Ми просто шукаємо перших зацікавлених людей. Якщо проект не стартує, ви нічого не втрачаєте.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Це безпечно для дітей?">
+                        <span>Це безпечно для дітей?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, пристрій неінвазивний, зчитує сигнали з поверхні шкіри. Він не передає електричний струм у мозок. Рекомендований вік — від 7 років.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Чи є наукові дослідження?">
+                        <span>Чи є наукові дослідження?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, є наукові дослідження, які підтверджують ефективність такого підходу до тренування уваги і зменшення стресу.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)" data-faq-title="Для чого ще можна використовувати гарнітуру?">
+                        <span>Для чого ще можна використовувати гарнітуру?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Розуміння свого внутрішнього стану, тренування спокою та концентрації, для дітей — розвиток уваги, реабілітація після стресу, медитація та практики усвідомленості.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-form-block" id="waitlist">
+                <h2>Станьте частиною першої групи замовників</h2>
+                <p>Ми на етапі фінального запуску.<br>Орієнтовна ціна гарнітури: $120.<br>Особливі умови для перших користувачів:</p>
+                <ul class="benefits-checklist">
+                    <li><strong>40% знижки на гарнітуру</strong></li>
+                    <li><strong>Пріоритетне відвантаження</strong></li>
+                    <li><strong>Можливість вплинути на розвиток продукту</strong></li>
+                </ul>
+                <form id="orderForm" action="https://formsubmit.co/c1d72d56b4c84fba98998cdeb428e3f2--" method="POST" onsubmit="handleOrderSubmit(event)">
+                    <input type="text" name="_honeypot" class="honeypot" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_next" value="thanks.html">
+                    <input type="hidden" name="_subject" value="Передзамовлення — ранній доступ (pre-order-st)">
+                    <input type="hidden" name="source" value="pre-order-st">
+                    <input type="hidden" name="ip" id="formIp">
+                    <input type="hidden" name="device" id="formDevice">
+                    <input type="hidden" name="browser" id="formBrowser">
+                    <input type="hidden" name="screen" id="formScreen">
+                    <input type="hidden" name="language" id="formLanguage">
+                    <input type="hidden" name="referrer" id="formReferrer">
+                    <input type="hidden" name="submitted_at" id="formSubmittedAt">
+                    <div class="form-group">
+                        <input type="text" id="orderName" name="name" placeholder=" " maxlength="100">
+                        <label for="orderName">Ім'я</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="orderEmail" name="email" required placeholder=" " maxlength="254">
+                        <label for="orderEmail">Email *</label>
+                        <span class="error-msg" id="emailError" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="orderPhone" name="phone" placeholder=" " maxlength="30">
+                        <label for="orderPhone">Телефон</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Відправити замовлення</button>
+                    <p class="form-nospam">Жодного спаму</p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        var cachedIp = '';
+
+        function detectDevice() {
+            var ua = navigator.userAgent || '';
+            if (/android/i.test(ua)) return 'Android';
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return 'iOS';
+            if (/Windows Phone/i.test(ua)) return 'Windows Phone';
+            if (/Mac/.test(ua)) return 'Mac';
+            if (/Win/.test(ua)) return 'Windows';
+            if (/Linux/.test(ua)) return 'Linux';
+            return 'Інше';
+        }
+
+        function detectBrowser() {
+            var ua = navigator.userAgent || '';
+            var match = ua.match(/(Chrome|Firefox|Safari|Edge|Opera|OPR|MSIE|Trident)[\/\s](\d+)/);
+            if (match) return match[1].replace('OPR', 'Opera').replace('Trident', 'IE') + ' ' + match[2];
+            return 'Невідомо';
+        }
+
+        function trackFacebookEvent(eventName, params) {
+            try {
+                if (typeof fbq === 'function') {
+                    if (params) {
+                        fbq('trackCustom', eventName, params);
+                    } else {
+                        fbq('trackCustom', eventName);
+                    }
+                }
+            } catch (e) {}
+        }
+
+        function toggleFaq(el) {
+            var answer = el.nextElementSibling;
+            var isActive = answer.classList.contains('active');
+            document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('active'); });
+            document.querySelectorAll('.faq-question span:last-child').forEach(function(s) { s.textContent = '+'; });
+            if (!isActive) {
+                answer.classList.add('active');
+                el.querySelector('span:last-child').textContent = '−';
+                trackFacebookEvent('FAQRead', {
+                    faq_title: el.getAttribute('data-faq-title') || 'unknown'
+                });
+            }
+        }
+
+        function fillFormMetadata(form) {
+            form.querySelector('#formIp').value = cachedIp || '—';
+            form.querySelector('#formDevice').value = detectDevice();
+            form.querySelector('#formBrowser').value = detectBrowser();
+            form.querySelector('#formScreen').value = (screen.width || '') + '×' + (screen.height || '');
+            form.querySelector('#formLanguage').value = navigator.language || navigator.userLanguage || '—';
+            form.querySelector('#formReferrer').value = document.referrer || '(прямий вхід)';
+            form.querySelector('#formSubmittedAt').value = new Date().toISOString();
+        }
+
+        /* Санітизація: видалення символів, небезпечних для XSS/ін'єкцій */
+        function sanitizeInput(str, maxLen) {
+            if (typeof str !== 'string') return '';
+            maxLen = maxLen || 500;
+            return str
+                .replace(/[<>\"'`&;]/g, '')
+                .replace(/\s+/g, ' ')
+                .trim()
+                .slice(0, maxLen);
+        }
+
+        function validateForm(form) {
+            var emailInput = form.querySelector('#orderEmail');
+            var emailError = form.querySelector('#emailError');
+            var valid = true;
+            emailInput.classList.remove('invalid');
+            if (emailError) emailError.textContent = '';
+
+            var email = (emailInput.value || '').trim();
+            if (!email) {
+                emailInput.classList.add('invalid');
+                if (emailError) emailError.textContent = 'Введіть email';
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.classList.add('invalid');
+                if (emailError) emailError.textContent = 'Введіть коректний email';
+                valid = false;
+            }
+            return valid;
+        }
+
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+            var form = event.target;
+
+            if (form.querySelector('input[name="_honeypot"]').value) {
+                return false;
+            }
+
+            if (!validateForm(form)) {
+                form.querySelector('#orderEmail').focus();
+                return false;
+            }
+
+            var nameInput = form.querySelector('#orderName');
+            var emailInput = form.querySelector('#orderEmail');
+            var phoneInput = form.querySelector('#orderPhone');
+            if (nameInput) nameInput.value = sanitizeInput(nameInput.value, 100);
+            if (emailInput) emailInput.value = sanitizeInput(emailInput.value, 254);
+            if (phoneInput) phoneInput.value = sanitizeInput(phoneInput.value, 30);
+
+            fillFormMetadata(form);
+            try {
+                if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+                    window.goatcounter.count({ path: 'preorder_modal_submit_st', event: true });
+                }
+            } catch (e) {}
+
+            trackFacebookEvent('FormSubmit', {
+                form_name: 'preorder_st'
+            });
+
+            form.submit();
+        }
+
+        if (!cachedIp) {
+            fetch('https://api.ipify.org?format=json').then(function(r) { return r.json(); })
+                .then(function(d) { cachedIp = d.ip || ''; })
+                .catch(function() {});
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href !== '#' && href !== '#!') {
+                    e.preventDefault();
+                    var t = document.querySelector(href);
+                    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
