@@ -99,7 +99,7 @@
         /* ===== HERO — purpleplanet blog ===== */
         .hero-block {
             text-align: center;
-            padding-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-sm);
         }
 
         .hero-block h1 {
@@ -123,10 +123,11 @@
         .hero-image-block {
             margin-top: var(--spacing-xl);
             width: 100%;
-            max-width: 560px;
+            max-width: 100%;
         }
 
-        .hero-image-block img {
+        .hero-image-block img,
+        .hero-image-block video {
             width: 100%;
             height: auto;
             display: block;
@@ -146,6 +147,7 @@
             align-items: center;
             justify-content: center;
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
         }
 
         .card-item-inner:hover {
@@ -177,6 +179,10 @@
         .number-inner {
             color: var(--color-primary);
             font-weight: 200;
+        }
+
+        .card-content {
+            width: 100%;
         }
 
         .card-content h2 {
@@ -605,8 +611,10 @@
                 <h1>Твій внутрішній спокій <br> під час зовнішнього хаосу</h1>
                 <p class="hero-subtitle">Розумна гарнітура допоможе швидко сфокусуватися на роботі та відновити сили</p>
                 <div class="hero-image-block">
-                    <!-- Додайте шлях до зображення в src -->
-                    <img src="main.png" alt="EEG-гарнітура" loading="lazy">
+                    <video autoplay muted loop playsinline poster="main.png">
+                        <source src="main.mp4" type="video/mp4">
+                        Ваш браузер не підтримує відео.
+                    </video>
                 </div>
             </div>
 
