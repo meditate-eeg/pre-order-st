@@ -29,7 +29,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -97,8 +97,8 @@
         .main-content {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-2xl);
-            padding: var(--spacing-xl) 0;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-md) 0;
         }
 
         /* ===== HERO — purpleplanet blog ===== */
@@ -271,7 +271,7 @@
         /* ===== ІНФОГРАФІКА — purpleplanet Infographics8 ===== */
         .infographic-section {
             text-align: left;
-            padding: var(--spacing-xl) 0;
+            padding: var(--spacing-md) 0;
         }
 
         .infographic-section h2 {
@@ -337,7 +337,7 @@
 
         /* ===== FAQ — purpleplanet ===== */
         .faq-section {
-            padding: var(--spacing-lg) 0;
+            padding: var(--spacing-md) 0;
         }
 
         .faq-section h2 {
@@ -402,7 +402,7 @@
 
         /* ===== CTA — purpleplanet ===== */
         .cta-form-block {
-            padding: var(--spacing-xl) var(--spacing-md);
+            padding: var(--spacing-lg) var(--spacing-md);
             background: linear-gradient(0deg, var(--color-dark), var(--color-dark-lighter));
             border: 2px solid var(--color-border);
             border-radius: var(--radius-full);
@@ -606,6 +606,35 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 200;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+            white-space: nowrap;
+        }
+
+        .floating-cta.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px);
+        }
+
+        @media (max-width: 600px) {
+            .floating-cta {
+                right: 16px;
+                left: 16px;
+                bottom: 16px;
+                width: calc(100% - 32px);
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -623,6 +652,15 @@
                     </video>
                 </div>
             </div>
+
+            <!-- Інфографіка — placeholder -->
+            <section class="infographic-section">
+                <h2>Як це працює</h2>
+                <div class="infographic-image" style="width: 100%; max-width: 600px; margin: 0 auto;">
+                    <img src="info-gr.jpeg" alt="Інфографіка роботи пристрою"
+                        style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;">
+                </div>
+            </section>
 
             <!-- Картка 1: Вашому мозку важче -->
             <section class="card-section">
@@ -668,15 +706,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Інфографіка — placeholder -->
-            <section class="infographic-section">
-                <h2>Як це працює</h2>
-                <div class="infographic-image" style="width: 100%; max-width: 600px; margin: 0 auto;">
-                    <img src="info-gr.jpeg" alt="Інфографіка роботи пристрою"
-                        style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;">
                 </div>
             </section>
 
@@ -866,6 +895,9 @@
         </main>
     </div>
 
+    <!-- Floating CTA -->
+    <a href="#waitlist" id="floatingCta" class="btn btn-primary floating-cta">Відправити замовлення ↗</a>
+
     <script>
         var cachedIp = '';
 
@@ -1005,6 +1037,22 @@
             });
         });
 
+        // ===== FLOATING CTA OBSERVER =====
+        (function () {
+            var cta = document.getElementById('floatingCta');
+            var form = document.getElementById('waitlist');
+            if (!cta || !form) return;
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        cta.classList.add('hidden');
+                    } else {
+                        cta.classList.remove('hidden');
+                    }
+                });
+            }, { threshold: 0.15 });
+            observer.observe(form);
+        })();
     </script>
 </body>
 
