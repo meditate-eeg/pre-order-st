@@ -63,6 +63,8 @@
             --color-white: #ffffff;
             --font-primary: 'Outfit', sans-serif;
             --font-secondary: 'Inter', sans-serif;
+            --font-size-base: 1rem;
+            --font-size-small: 0.85rem;
             --spacing-xs: 0.5rem;
             --spacing-sm: 0.75rem;
             --spacing-md: 1rem;
@@ -118,7 +120,7 @@
 
         .hero-subtitle {
             color: var(--color-text-light);
-            font-size: 1.1rem;
+            font-size: var(--font-size-base);
             line-height: 1.7;
             max-width: 560px;
             margin: 0;
@@ -191,7 +193,7 @@
         }
 
         .card-content h2 {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.35;
@@ -252,7 +254,7 @@
         }
 
         .card-subitem h3 {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             font-size: 1.05rem;
             font-weight: 600;
             color: var(--color-primary);
@@ -261,7 +263,7 @@
         }
 
         .card-subitem p {
-            font-size: 0.95rem;
+            font-size: var(--font-size-base);
             color: var(--color-text-light);
             margin: 0;
             line-height: 1.6;
@@ -275,7 +277,7 @@
         }
 
         .infographic-section h2 {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             font-size: 1.75rem;
             font-weight: 600;
             margin-bottom: var(--spacing-sm);
@@ -341,7 +343,7 @@
         }
 
         .faq-section h2 {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: var(--spacing-lg);
@@ -411,7 +413,7 @@
         }
 
         .cta-form-block h2 {
-            font-family: var(--font-primary);
+            font-family: var(--font-secondary);
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: var(--spacing-md);
@@ -439,7 +441,7 @@
             padding-left: 1.5rem;
             position: relative;
             color: var(--color-text-light);
-            font-size: 0.95rem;
+            font-size: var(--font-size-base);
             text-align: left;
         }
 
@@ -562,7 +564,7 @@
         .form-nospam,
         .cta-form-block p.form-nospam {
             margin-top: var(--spacing-xs);
-            font-size: 0.75rem;
+            font-size: var(--font-size-small);
             color: var(--color-text-light);
             text-align: center;
         }
@@ -644,7 +646,7 @@
         <main class="main-content">
             <!-- Hero -->
             <div class="hero-block">
-                <h1>Гарнітура допомагає відновитись, навіть після тривоги</h1>
+                <h1>Гарнітура, яка допомагає відновитись, навіть після тривоги</h1>
                 <p class="hero-subtitle">Зчитує стан вашого мозку і підказує, щоб ви могли швидше повернутись до
                     рівноваги.</p>
                 <div class="hero-image-block">
@@ -852,12 +854,12 @@
 
             <!-- CTA -->
             <section class="cta-form-block" id="waitlist">
-                <h2>Перші 200 учасників отримують особливі умови</h2>
+                <h2>Перші 50 учасників отримують особливі умови</h2>
                 <p>Ми на етапі фінального запуску.<br>Орієнтовна ціна гарнітури: $120.<br>Особливі умови для перших
                     користувачів:</p>
                 <ul class="benefits-checklist">
                     <li><strong>Знижка 40%, ціна $72</strong></li>
-                    <li><strong>Пріоритетне відвантаження</strong></li>
+                    <li><strong>Доставка з першої партії</strong></li>
                     <li><strong>Можливість вплинути на розвиток продукту</strong></li>
                 </ul>
                 <form id="orderForm" action="https://formsubmit.co/c1d72d56b4c84fba98998cdeb428e3f2--" method="POST"
